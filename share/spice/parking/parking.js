@@ -43,7 +43,7 @@
     env.ddg_spice_parking = function(api_result){
         
         // Check that results were returned successfully
-        if (!api_result.success || api_result.resultsCount === 0) {
+        if (!api_result || !api_result.success || api_result.resultsCount === 0) {
             return Spice.failed('parking');        
         }
         
