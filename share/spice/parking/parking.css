@@ -1,0 +1,19 @@
+#zci-parking .tile--parking .tile__media__img {
+    margin-top: -20%;
+    min-width: 100%;
+}
+
+#zci-parking .btn--parking--orange {
+    color: white;
+    margin-top: .8em;
+    border: none;
+    background-color: #FF6700;
+    border-bottom: 2px solid #BF5527;
+}
+
+#zci-parking .btn--parking--orange:hover {
+    color: white;
+    border: none;
+    background-color: #FF7234;
+    border-bottom: 2px solid #BF5527;
+}
