@@ -58,18 +58,9 @@
             
             var normalizedItem = {
                 /* item */
-              title: item.displayName,
-              url: item.affiliateUrl,
-              description: item.distanceString + " | " + item.price + "+",
+              name: item.displayName,
+              distance: item.distanceString,
               image: item.images[0].imagePathMedium,
-                
-                /* detail */
-              heading: item.displayName,
-              subtitle: item.distanceString,
-              price: "Starting at " + item.price,
-              img_m: item.images[0].imagePath,
-              buttonUrl: item.affiliateUrl,
-              abstract: item.description,
                 
                 /* details */
               img: item.images[0].imagePath,
@@ -97,7 +88,7 @@
             normalize: normalize,
             templates: {                
                 group: 'places',
-                item: 'basic_image_item',
+                item: Spice.parking.item
             }
         });
     };
