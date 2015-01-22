@@ -72,8 +72,11 @@
               abstract: item.description,
                 
                 /* details */
-              img: item.images[0].imagePath
+              img: item.images[0].imagePath,
                 
+              address: item.address1,
+              lat: item.latitude,
+              lon: item.longitude
             };
             
             return normalizedItem;            
@@ -83,28 +86,18 @@
         Spice.add({
             id: "parking",
             name: "Parking",
+            model: 'Place',
+            view: 'Places',
             data: api_result.data.locations,
             meta: {
                 primaryText: "Parking Near: " + api_result.data.search.displayText,                
                 sourceName: "ParkingPanda.com",
                 sourceUrl: 'https://www.parkingpanda.com/Search/?ref=duckduck&location=' + api_result.data.search.query
             },
-            
             normalize: normalize,
-            
             templates: {                
-                group: 'products',
+                group: 'places',
                 item: 'basic_image_item',
-                item_detail: 'products_item_detail',              
-                options: {
-                    buy: Spice.parking.buy,
-                    subtitle_content: Spice.parking.subtitle,
-                    detail: false,
-                    brand: false,
-                    rating: false,
-                    moreAt: true,
-                    priceAndBrand: false
-                }
             }
         });
     };
