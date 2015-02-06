@@ -17,6 +17,7 @@
 
 .tile--producthunt .tile__domain {
     color: #808080;
+    margin-bottom: 0.25em;
 }
 
 .tile--producthunt .tile__votes {
